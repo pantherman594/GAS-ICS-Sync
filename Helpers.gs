@@ -379,11 +379,11 @@ function createEvent(event, calendarTz){
     newEvent = {
       start: {
         dateTime : icalEvent.startDate.toString(),
-        timeZone : validateTimeZone(icalEvent.startDate.timezone.toString(), calendarTz)
+        timeZone : validateTimeZone(icalEvent.startDate.zone.tzid, calendarTz)
       },
       end: {
         dateTime : icalEvent.endDate.toString(),
-        timeZone : validateTimeZone(icalEvent.endDate.timezone.toString(), calendarTz)
+        timeZone : validateTimeZone(icalEvent.endDate.zone.tzid, calendarTz)
       },
     };
   }

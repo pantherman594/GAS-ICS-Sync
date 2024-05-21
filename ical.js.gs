@@ -8704,7 +8704,8 @@
           obj = new Event(obj);
         }
         if (this.strictExceptions && obj.uid !== this.uid) {
-          throw new Error('attempted to relate unrelated exception');
+          // throw new Error('attempted to relate unrelated exception');
+          return;
         }
         var id = obj.recurrenceId.toString();
 
